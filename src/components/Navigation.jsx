@@ -20,13 +20,16 @@ const Navigation = () => {
     }
   ]
   return (
-    <nav>
-      <ul>
-        {links.map((link) =>
-          (<li key={link.link}><Link to={link.link} className={page === link.link ? 'active' : null}  onClick={() => setPage(link.link)}>{link.text}</Link></li>)
-        )}
-      </ul>
-    </nav>
+    <>
+      <h1>JT Schams</h1>
+      <nav>
+        <ul>
+          {links.map((link) =>
+            (<li key={link.link}><Link to={link.link} className={page === link.link ? 'active' : null}  onClick={() => setPage(link.link)}>{link.text}</Link></li>)
+          )}
+        </ul>
+      </nav>
+    </>
   )
 }
 
