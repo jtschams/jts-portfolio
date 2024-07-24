@@ -1,8 +1,13 @@
-// TODO: Create Portfolio Page, remove error
+import projects from '../utils/repoList'
+import SingleRepo from '../components/SingleRepo'
 
 export default function Portfolio() {
-  throw error
   return (
-    <main></main>
+    <main>
+      <header><h2>Portfolio</h2></header>
+      <section className='portfolio'>
+        {projects.map((project) => (<SingleRepo {...project} />))}
+      </section>
+    </main>
   )
 }

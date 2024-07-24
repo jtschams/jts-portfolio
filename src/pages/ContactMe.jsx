@@ -3,6 +3,9 @@
 export default function ContactMe() {
   throw error
   return (
-    <main></main>
+    <main>
+      <header><h2>Contact Me</h2></header>
+      <section></section>
+    </main>
   )
 }
