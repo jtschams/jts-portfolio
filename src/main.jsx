@@ -1,4 +1,3 @@
-import React from 'react'  // TODO: Remove line?
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 

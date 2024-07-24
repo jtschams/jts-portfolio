@@ -1,6 +1,5 @@
 import selfPicture from '../assets/me.jpg';
 // TODO: Better picture
-// TODO: Fix CSS for AboutMe
 
 export default function AboutMe() {
 

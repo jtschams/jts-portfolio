@@ -1,6 +1,6 @@
 :root {
+  font-family: "Inter", sans-serif;
   font-size: 8px;
-  /* TODO: Google Font: Inter */
   --body-background: #304038;
   --light: #CCD4CC;
   --dark: #2B2729;
@@ -13,10 +13,15 @@ body {
   height: 100%;
   margin: 0;
 }
+
 h1 {
-  /* TODO: Google font: Estonia */
+  font-family: "Estonia", cursive;
+  font-size: 8rem;
+  font-weight: 400;
+  font-style: italic;
   color: var(--highlight);
   width: calc(40vw - 80px);
+  margin: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -28,6 +33,7 @@ nav {
   box-shadow: 4px 8px 4px #00000044;
   height: 80px;
   width: 60vw;
+  min-width: 500px;
   border-radius: 15px 0 0 15px;
   margin: 0;
   padding-right: 80px;
@@ -49,6 +55,7 @@ nav ul {
 nav a {
   color: var(--light);
   font-size: 3rem;
+  font-weight: 500;
   text-decoration: underline;
 }
 
@@ -61,8 +68,9 @@ main, .main {
   background-color: var(--light);
   box-shadow: inset 0 0 12px 4px #00000088;
   width: calc(94vw - 160px);
+  min-height: calc(100vh - 3vw - 138px);
   border-radius: 3vw;
-  margin: 80px auto 0;
+  margin: 80px auto 10px;
   padding: 1rem 3vw 3vw
 }
 
@@ -71,26 +79,32 @@ header {
 }
 
 h2 {
-  /* TODO: Google Font: Halant */
+  font-family: "Halant", serif;
   font-size: 6rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
-section {
-  display: flex;
-  padding-top: 20px;
-}
-
 img.selfPicture {
-  max-width: calc(40vw - 200px);
-  margin: 10px 40px 10px;
+  width: calc(40vw - 200px);
+  max-width: 400px;
+  object-fit: contain;
+  float: left;
+  margin: 1rem 40px 30px;
   border-radius: 40px;
   border: 5px solid var(--body-background)
 }
 
 p {
   color: var(--dark);
+  text-align: justify;
   font-size: 2.5rem;
-  padding: 3vw
+  padding: 3vw;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
 }
