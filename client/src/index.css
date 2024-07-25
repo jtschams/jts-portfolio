@@ -117,12 +117,15 @@ img.selfPicture {
 
 .project-card {
   width: 500px;
-  position: relative
+  height: 375px;
+  position: relative;
+  margin: 20px
 }
 
 .project-card img {
   width: inherit;
-  object-fit: contain;
+  height:inherit;
+  object-fit: cover;
 }
 
 .repo-info {

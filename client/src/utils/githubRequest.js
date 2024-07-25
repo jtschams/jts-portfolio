@@ -16,6 +16,7 @@ const repoRequest = async () => {
       github: repo.html_url
     }
   })
+  return userRepos;
 }
 
 export default repoRequest;
