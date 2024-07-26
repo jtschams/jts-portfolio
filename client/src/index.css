@@ -42,14 +42,18 @@ nav {
   right: 0;
 }
 
-nav ul {
-  height: 80px;
+ul {
   margin: 0;
   padding:0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+nav ul {
+  height: 80px;
 }
 
 nav a {
@@ -80,7 +84,7 @@ main, .main {
   padding: 1rem 3vw 3vw
 }
 
-header {
+header, h4 {
   width: calc(37vw - 160px)
 }
 
@@ -116,6 +120,8 @@ img.selfPicture {
 }
 
 .project-card {
+  /* TODO: remove flex  when more repos added*/
+  flex: 1 0 34%;
   width: 500px;
   height: 375px;
   position: relative;
@@ -212,4 +218,36 @@ button#submit:hover {
 #response {
   padding: 10px;
   text-align: center;
+}
+
+.download-link {
+  color: var(--body-background);
+  border-radius: 8px;
+  padding: 0 4px 2px;
+  margin: 0 4px;
+}
+
+.download-link:hover {
+  color: var(--highlight);
+  background-color: #00000044;
+}
+
+h4 {
+  color: var(--dark);
+  font-family: 'Halant', serif;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.proficiencies {
+  width: 530px;
+  padding-left: 3vw;
+  justify-content: space-between;
+}
+
+.proficiencies li {
+  flex: 1 0 26%;
+  line-height: 2em;
 }

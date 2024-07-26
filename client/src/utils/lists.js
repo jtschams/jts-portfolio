@@ -1,9 +1,12 @@
 import AdventurerVault from '../assets/adventurer-vault.png'
 import DishDelight from '../assets/dish-delight.png'
 import TechBlog from '../assets/tech-blog.png'
+import ParkRainger from '../assets/park-rainger.png'
+
+export const proficiencies = [ 'HTML', 'CSS', 'JavaScript', 'Node', 'Express', 'PostgreSQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React', 'MERN' ]
 
 // TODO: Fill out project list, add and import pictures
-export default [
+export const projects = [
   {
     name: 'Adventurer Vault',
     repo: 'https://github.com/TheDorkTrain/Adventurer-Vault',
@@ -22,12 +25,12 @@ export default [
     page: 'https://mvc-tech-blog-y48f.onrender.com',
     preview: TechBlog,
     description: 'A simple blog site created using MVC structure.',
-  // }, {
-  //   name: '',
-  //   repo: '',
-  //   page: '',
-  //   preview: '',
-  //   description: '',
+  }, {
+    name: 'Park RAINger',
+    repo: 'https://github.com/andrewvu71/Park-Rainger-App',
+    page: 'https://andrewvu71.github.io/Park-Rainger-App/',
+    preview: ParkRainger,
+    description: 'A website for finding nearby National Parks with rain in their forecast.',
   // }, {
   //   name: '',
   //   repo: '',

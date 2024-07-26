@@ -1,4 +1,4 @@
-import projects from '../utils/repoList'
+import { projects } from '../utils/lists'
 import SingleRepo from '../components/SingleRepo'
 
 export default function Portfolio() {
