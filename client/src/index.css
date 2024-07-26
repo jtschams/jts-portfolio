@@ -120,12 +120,11 @@ img.selfPicture {
 }
 
 .project-card {
-  /* TODO: remove flex  when more repos added*/
-  flex: 1 0 34%;
   width: 500px;
   height: 375px;
   position: relative;
-  margin: 20px
+  /* TODO: change margins to 20px when more repos added*/
+  margin: 2vw;
 }
 
 .project-card img {
