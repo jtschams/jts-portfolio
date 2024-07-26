@@ -166,3 +166,50 @@ h3 {
 .repo-info a {
   color: var(--highlight)
 }
+
+.contact-me {
+  margin-left: 10vw;
+  width: 60vw;
+}
+
+label {
+  color: var(--body-background);
+  font-family: 'Halant', serif;
+  font-weight: 600;
+  font-size: 3rem;
+  display: block;
+  margin: 20px 10px 10px;
+}
+
+input, textarea, button {
+  border: 2px solid var(--body-background);
+  background-color: #FFFFFF66;
+  color: var(--dark);
+  width: 100%;
+  border-radius: 8px;
+  padding: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-button {
+  text-align: center;
+  margin: 10px;
+}
+
+button#submit {
+  transition: background-color .5s;
+  width: 100px;
+  font-weight: 700;
+}
+
+button#submit:hover {
+  background-color: #00000011;
+  cursor: pointer;
+}
+
+#response {
+  padding: 10px;
+  text-align: center;
+}

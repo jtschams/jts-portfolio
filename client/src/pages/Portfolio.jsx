@@ -6,7 +6,7 @@ export default function Portfolio() {
     <main>
       <header><h2>Portfolio</h2></header>
       <section className='portfolio'>
-        {projects.map((project) => (<SingleRepo {...project} />))}
+        {projects.map((project) => (<SingleRepo {...project} key={project.name} />))}
       </section>
     </main>
   )

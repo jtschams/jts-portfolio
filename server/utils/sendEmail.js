@@ -1,4 +1,5 @@
 module.exports = function(req, res) {
   // TODO: add email functionality
-  res.json('Contact form not yet implemented.')
+  console.log(req.body)
+  res.status(500).json('Contact form not yet implemented.')
 }

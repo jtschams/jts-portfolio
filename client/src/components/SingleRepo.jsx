@@ -1,7 +1,6 @@
 export default function SingleRepo(project) {
-  console.log(project.name)
   return (
-    <article key={project.name} className='project-card'>
+    <article className='project-card'>
       <img src={project.preview} />
       <div className='repo-info'>
         <h3>{project.name}</h3>
