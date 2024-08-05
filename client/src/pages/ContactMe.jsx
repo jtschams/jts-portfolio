@@ -10,8 +10,6 @@ export default function ContactMe() {
   function changeHandler({target: {name, value}}) {
     const submitter = document.querySelector('.form-button');
     submitter.innerHTML = `<button form='contact-form' type='submit' id='submit'>Send</button>`
-    // TODO: remove following line when contact implemented
-    submitter.innerHTML = `<p style='padding: 0; font-size: 2rem; text-align: center;'>Contact form not yet implemented.  Please email at <a href='mailto:jtschams@yahoo.com'>jtschams@yahoo.com</a>.</p>`;
     switch (name) {
       case 'name':
         setName(value)
@@ -37,10 +35,12 @@ export default function ContactMe() {
       submitter.innerHTML = 'Please enter a message.';
     } else {
       const result = await contactMe({ name, email, message });
-      submitter.textContent = result;
-      setName('');
-      setEmail('');
-      setMessage('');
+      submitter.innerHTML = `<p style='padding: 0; font-size: 2rem; text-align: center;'>${result}</p>`;
+      if (result.ok) {
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
     }
   }
   
