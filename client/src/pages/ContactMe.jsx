@@ -7,81 +7,59 @@ export default function ContactMe() {
   const [ email, setEmail ]  = useState('');
   const [ message, setMessage ]  = useState('');
   
+  function changeHandler({target: {name, value}}) {
+    const submitter = document.querySelector('.form-button');
+    submitter.innerHTML = `<button form='contact-form' type='submit' id='submit'>Send</button>`
+    // TODO: remove following line when contact implemented
+    submitter.innerHTML = `<p style='padding: 0; font-size: 2rem; text-align: center;'>Contact form not yet implemented.  Please email at <a href='mailto:jtschams@yahoo.com'>jtschams@yahoo.com</a>.</p>`;
+    switch (name) {
+      case 'name':
+        setName(value)
+        break;
+      case 'email':
+        setEmail(value)
+        break;
+      case 'message':
+        setMessage(value)
+        break;
+    }
+    return;
+  }
+  
   const sendContact = async () => {
     event.preventDefault();
-    const responseEl = document.getElementById('response');
+    const submitter = document.querySelector('.form-button');
     if (!name) {
-      responseEl.style = 'display: block;';
-      responseEl.textContent = 'Please enter your name.';
+      submitter.innerHTML = 'Please enter your name.';
     } else if (!email) {
-      responseEl.style = 'display: block;';
-      responseEl.textContent = 'Please enter your email.';
+      submitter.innerHTML = 'Please enter your email.';
     } else if (!message) {
-      responseEl.style = 'display: block;';
-      responseEl.textContent = 'Please enter a message.';
+      submitter.innerHTML = 'Please enter a message.';
     } else {
       const result = await contactMe({ name, email, message });
-      responseEl.style = 'display: block;';
-      responseEl.textContent = result;
+      submitter.textContent = result;
+      setName('');
+      setEmail('');
+      setMessage('');
     }
   }
   
-  // return (
-  //   <main>
-  //     <header><h2>Contact Me</h2></header>
-  //     <section className="contact-me">
-  //       <p id='response' style={{display: 'none'}}></p>
-  //       <form id='contact-form' onSubmit={sendContact}>
-  //         <div className='form-input'>
-  //           <label>Name:</label>
-  //           <input type='text' name='name' id='contact-name' value={name} onChange={(event) => setName(event.target.value)} />
-  //         </div>
-  //         <div className='form-input'>
-  //           <label>Email:</label>
-  //           <input type='email' name='email' id='contact-email' value={email} onChange={(event) => setEmail(event.target.value)} />
-  //         </div>
-  //         <div className='form-input'>
-  //           <label>Message:</label>
-  //           <textarea name='message' id='post-title' rows='8' value={message} onChange={(event) => setMessage(event.target.value)}></textarea>
-  //         </div>
-  //         <div className='form-button'><button form='contact-form' type='submit' id='submit'>Send</button></div>
-  //       </form>
-  //     </section>
-  //   </main>
-  // )
-  // TODO: remove temp return when email API implemented
   return (
     <main>
       <header><h2>Contact Me</h2></header>
       <section className="contact-me">
-        <p id='response' style={{display: 'none'}}></p>
         <form id='contact-form' onSubmit={sendContact}>
           <div className='form-input'>
             <label>Name:</label>
-            <input type='text' name='name' id='contact-name' value={name} onChange={(event) => {
-              const responseEl = document.getElementById('response');
-              responseEl.style = 'display: block;';
-              responseEl.textContent = 'Contact form not yet implemented.';
-              setName(event.target.value);
-              }} />
+            <input type='text' name='name' id='contact-name' value={name} onChange={changeHandler} />
           </div>
           <div className='form-input'>
             <label>Email:</label>
-            <input type='email' name='email' id='contact-email' value={email} onChange={(event) => {
-              const responseEl = document.getElementById('response');
-              responseEl.style = 'display: block;';
-              responseEl.textContent = 'Contact form not yet implemented.';
-              setEmail(event.target.value);
-              }} />
+            <input type='email' name='email' id='contact-email' value={email} onChange={changeHandler} />
           </div>
           <div className='form-input'>
             <label>Message:</label>
-            <textarea name='message' id='post-title' rows='8' value={message} onChange={(event) => {
-              const responseEl = document.getElementById('response');
-              responseEl.style = 'display: block;';
-              responseEl.textContent = 'Contact form not yet implemented.';
-              setMessage(event.target.value);
-              }}></textarea>
+            <textarea name='message' id='post-title' rows='8' value={message} onChange={changeHandler}></textarea>
           </div>
           <div className='form-button'><button form='contact-form' type='submit' id='submit'>Send</button></div>
         </form>
