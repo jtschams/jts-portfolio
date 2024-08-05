@@ -34,12 +34,17 @@ export default function ContactMe() {
     } else if (!message) {
       submitter.innerHTML = 'Please enter a message.';
     } else {
+      submitter.innerHTML = `<p style='padding: 0; font-size: 2rem; text-align: center;'>Sending...</p>`;
       const result = await contactMe({ name, email, message });
       submitter.innerHTML = `<p style='padding: 0; font-size: 2rem; text-align: center;'>${result}</p>`;
-      if (result.ok) {
+      if (result === 'Thank you for your message.  It has been sent to my email.') {
         setName('');
         setEmail('');
         setMessage('');
+      } else {
+        setTimeout(() => {
+          submitter.innerHTML += `<button form='contact-form' type='submit' id='submit' style='margin: 15px;'>Resubmit</button>`
+        }, 4000)
       }
     }
   }

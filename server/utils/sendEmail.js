@@ -20,6 +20,6 @@ module.exports = async function(req, res) {
     throw result;
   } catch (err) {
     console.error(err)
-    res.status(500).json('A server error occurred.')
+    res.status(500).json('A server error occurred.  Please try again later or email me at jtschams@yahoo.com.')
   }
 }
