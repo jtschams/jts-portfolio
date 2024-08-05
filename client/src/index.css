@@ -120,13 +120,14 @@ img.selfPicture {
 }
 
 .project-card {
-  flex: 1 0 40%;
+  /* TODO: change flex to 1 0 25% when more repos added*/
+  flex: 1 0 35%;
   width: 100%;
+  min-width: 500px;
   height: 375px;
   position: relative;
   border-radius: 30px;
   border: 4px solid var(--body-background);
-  /* TODO: change margins to 20px when more repos added*/
   margin: 5px;
 }
 
