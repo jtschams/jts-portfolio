@@ -149,10 +149,6 @@ img.selfPicture {
   background-color: #304038CC;
 }
 
-.repo-info:hover {
-  opacity: 1;
-}
-
 hgroup {
   position: absolute;
   bottom: 0%;
@@ -166,8 +162,22 @@ hgroup {
 }
 
 .repo-info:hover > hgroup {
-  height: 40%;
+  height: 50%;
   bottom: 10%;
+}
+
+.contribution {
+  padding: 0;
+  color: var(--light);
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  transition: all .4s .6s;
+}
+
+.repo-info:hover > hgroup > .contribution {
+  opacity: 1;
+  padding: 0 0 80px;
 }
 
 hgroup > h3 {
@@ -192,7 +202,7 @@ hgroup > div {
   opacity: 0;
 }
 
-.repo-info:hover> hgroup > div, .repo-info:hover> hgroup > h3 {
+.repo-info:hover, .repo-info:hover > hgroup > div, .repo-info:hover > hgroup > h3 {
   opacity: 1;
 }
 
