@@ -9,7 +9,7 @@ const openTab = function() {
   return (
     <main>
       <header><h2>Resume</h2></header>
-      <section>
+      <section id="resume-section">
         <p>Click<a href='/jts-resume.pdf' download='jts-resume.pdf' className='download-link' onClick={openTab}>here</a>to view and download pdf of my resume.</p>
         <article>
           <h4>Proficiencies</h4>

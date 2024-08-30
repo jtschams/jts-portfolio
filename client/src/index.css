@@ -1,3 +1,5 @@
+  /* Defaults and Name in Header */
+
 :root {
   font-family: "Inter", sans-serif;
   font-size: 8px;
@@ -28,10 +30,47 @@ h1 {
   text-align: center;
 }
 
+/* Burger Button */
+
+.burger {
+  display: none;
+  height: 50px;
+  aspect-ratio: 1;
+  background-color: var(--dark);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 15px;
+  border-radius: 0 0 15px 0;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 80%;
+  height: 12.5%;
+  margin: 15% auto;
+  background-color: var(--light);
+  transition: all .4s;
+}
+
+.open .bar1 {
+  transform: rotate(-45deg) translateX(-20%) scaleX(.7) 
+}
+
+.open .bar2 {
+  transform: translateX(-40%) scaleX(0);
+}
+
+.open .bar3 {
+  transform: rotate(45deg) translateX(-20%) scaleX(.7) 
+}
+
+  /* Navbar */
+
 nav {
   background-color: var(--dark);
   box-shadow: 4px 8px 4px #00000044;
-  height: 80px;
   width: 60vw;
   min-width: 500px;
   border-radius: 15px 0 0 15px;
@@ -40,6 +79,7 @@ nav {
   position: absolute;
   top: 40px;
   right: 0;
+  z-index: 1;
 }
 
 ul {
@@ -57,6 +97,7 @@ nav ul {
 }
 
 nav a {
+  height: 80px;
   color: var(--light);
   font-size: 3rem;
   font-weight: 500;
@@ -68,11 +109,15 @@ nav a.active {
   text-decoration: none;
 }
 
+  /* Footer */
+
 footer {
   text-align: center;
   line-height: 40px;
   font-weight: 600;
 }
+
+  /* Shared Main Content */
 
 main, .main {
   background-color: var(--light);
@@ -103,15 +148,20 @@ p {
   margin: 0;
 }
 
+  /* About Me */
+
 img.selfPicture {
   width: calc(40vw - 200px);
   max-width: 400px;
+  min-width: 285px;
   object-fit: contain;
   float: left;
   margin: 1rem 40px 30px;
   border-radius: 40px;
   border: 5px solid var(--body-background)
 }
+
+  /* Portfolio */
 
 .portfolio {
   display: flex;
@@ -123,7 +173,7 @@ img.selfPicture {
   /* TODO: change flex to 1 0 25% when more repos added*/
   flex: 1 0 35%;
   width: 100%;
-  min-width: 500px;
+  min-width: 425px;
   height: 375px;
   position: relative;
   border-radius: 30px;
@@ -210,6 +260,8 @@ hgroup > div {
   color: var(--highlight)
 }
 
+  /* Contact Me */
+
 .contact-me {
   margin-left: 10vw;
   width: 60vw;
@@ -257,6 +309,8 @@ button#submit:hover {
   text-align: center;
 }
 
+  /* Resume */
+
 .download-link {
   color: var(--body-background);
   border-radius: 8px;
@@ -287,4 +341,85 @@ h4 {
 .proficiencies li {
   flex: 1 0 26%;
   line-height: 2em;
+}
+
+@media screen and (max-width: 1120px) {
+  h1 {
+    background-color: var(--dark);
+    width: 100vw;
+    height: 80px;
+  }
+  
+  .burger {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    width: 250px;
+    min-width: 225px;
+    top: 0;
+    left: -300px;
+    padding: 60px 15px 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: left .6s;
+  }
+
+  nav.open {
+    left: 0;
+  }
+
+  nav ul {
+    height: 100vh;
+    display: block;
+  }
+
+  nav li {
+    margin: 25px 0;
+  }
+
+  nav a {
+    font-size: 5rem;
+  }
+
+  main {
+    margin-top: 80px;
+    width: 94vw;
+    box-shadow: none;
+    border-radius: 0 0 3vw 3vw;
+  }
+
+  header {
+    width: 100%;
+    border-bottom: 3px solid var(--body-background);
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .contact-me {
+    width: 70vw;
+  }
+
+  #resume-section {
+    padding-left: 10vw;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  img.selfPicture {
+    margin: 1rem calc((100% - 290px) / 2 ) 30px;
+    float: none;
+  }
+  
+  .contact-me {
+    width: 75vw;
+  }
+
+  #resume-section {
+    padding-left: 5vw;
+  }
 }
