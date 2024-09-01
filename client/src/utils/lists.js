@@ -3,7 +3,7 @@ import DishDelight from '../assets/dish-delight.png'
 import TechBlog from '../assets/tech-blog.png'
 import ParkRainger from '../assets/park-rainger.png'
 
-export const proficiencies = [ 'HTML', 'CSS', 'JavaScript', 'Node', 'Express', 'PostgreSQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React', 'MERN' ]
+export const proficiencies = [ 'HTML', 'CSS', 'JavaScript', 'Node', 'Express', 'PostgreSQL', 'Sequelize', 'MongoDB', 'Mongoose', 'React', 'MERN', '' ]
 
 // TODO: Fill out project list, add and import pictures
 export const projects = [

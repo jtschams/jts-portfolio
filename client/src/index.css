@@ -35,7 +35,7 @@ h1 {
 .burger {
   display: none;
   height: 50px;
-  aspect-ratio: 1;
+  width: 50px;
   background-color: var(--dark);
   position: fixed;
   z-index: 2;
